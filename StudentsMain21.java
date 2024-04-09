@@ -9,8 +9,12 @@ public class StudentsMain21 {
         Scanner s = new Scanner(System.in);
         Scanner s1 = new Scanner(System.in);
 
-        SearchStudent21 data = new SearchStudent21();
+        System.out.print("Enter the number of students: ");
         int amountStudent = 5;
+        s.nextLine();
+        
+        SearchStudent21 data = new SearchStudent21(amountStudent);
+        
 
         System.out.println("--------------------------------------");
         System.out.println("Input student data accordingly from smallest NIM");
@@ -35,18 +39,18 @@ public class StudentsMain21 {
         data.display();
 
         System.out.println("-------------------");
-        System.out.println("-------------------");
+        System.out.println("===================");
         System.out.print("Search student by NIM: ");
         int search = s.nextInt();
-        System.out.println("Using Sequential Search");
-        int position = data.findSeqSearch(search);
-
-        System.out.println("=====================");
-        System.out.print("Search student by NIM: ");
         System.out.print("Using binary Search");
         int position1 = data.FindBinarySearch(search, 0, amountStudent -1);
         
-        data.showPosition(search, position);
-        data.showData(search, position);  
+        if (position1 != -1) {
+            System.out.println("Data : " + search + " is found in index -" + position1);
+            data.listStd[position1].display();
+        } else {
+            System.out.println("Data : " + search + " is not found");
+            
+        }
     }
 }

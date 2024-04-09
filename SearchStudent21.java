@@ -6,6 +6,11 @@ public class SearchStudent21 {
     Students21[] listStd = new Students21[5];
     int idx;
 
+    public SearchStudent21(int size) {
+        listStd = new Students21[size];
+        idx = 0;
+    }
+
     public void add(Students21 std) {
         if (idx < listStd.length) {
             listStd[idx] = std;
