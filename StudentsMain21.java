@@ -41,8 +41,12 @@ public class StudentsMain21 {
         System.out.println("Using Sequential Search");
         int position = data.findSeqSearch(search);
 
+        System.out.println("=====================");
+        System.out.print("Search student by NIM: ");
+        System.out.print("Using binary Search");
+        int position1 = data.FindBinarySearch(search, 0, amountStudent -1);
+        
         data.showPosition(search, position);
-
         data.showData(search, position);  
     }
 }
