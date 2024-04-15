@@ -38,7 +38,7 @@ public class StudentsMain21 {
         sorting.MergeSorting(listNIM);
 
         System.out.println("--------------------------------------");
-        System.out.println("Entire Student Data (Sorted)");
+        System.out.println("Entire Student Data");
         data.display();
 
         System.out.println("-------------------");
