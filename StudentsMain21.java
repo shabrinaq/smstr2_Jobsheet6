@@ -7,14 +7,15 @@ public class StudentsMain21 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        Scanner s1 = new Scanner(System.in);
+        
+        MergeSorting21 sorting = new MergeSorting21();
 
         System.out.print("Enter the number of students: ");
         int amountStudent = 5;
         s.nextLine();
         
         SearchStudent21 data = new SearchStudent21(amountStudent);
-        
+        int[] listNIM = new int[amountStudent];
 
         System.out.println("--------------------------------------");
         System.out.println("Input student data accordingly from smallest NIM");
@@ -34,8 +35,10 @@ public class StudentsMain21 {
             data.add(std);
         }
 
+        sorting.MergeSorting(listNIM);
+
         System.out.println("--------------------------------------");
-        System.out.println("Entire Student Data");
+        System.out.println("Entire Student Data (Sorted)");
         data.display();
 
         System.out.println("-------------------");
@@ -49,8 +52,7 @@ public class StudentsMain21 {
             System.out.println("Data : " + search + " is found in index -" + position1);
             data.listStd[position1].display();
         } else {
-            System.out.println("Data : " + search + " is not found");
-            
+            System.out.println("Data : " + search + " is not found");     
         }
     }
 }

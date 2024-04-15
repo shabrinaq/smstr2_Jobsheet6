@@ -4,7 +4,7 @@
 public class MergeSorting21 {
 
     public void MergeSorting(int[] data) {
-        
+        sort(data, 0, data.length - 1);
     }
 
     private void merge(int data[], int left, int mid, int right) {
