@@ -3,7 +3,7 @@
  */
 public class SearchStudent21 {
 
-    Students21[] listStd = new Students21[3];
+    Students21[] listStd = new Students21[5];
     int idx;
 
     public SearchStudent21(int size) {
@@ -38,7 +38,7 @@ public class SearchStudent21 {
         return position;
     }
 
-    public void showPosition(String x, int pos) {
+    public void showPosition(int x, int pos) {
         if (pos != -1) {
             System.out.println("Data : " + x + " is foud in index-"+pos);
         } else {
@@ -46,7 +46,7 @@ public class SearchStudent21 {
         }
     }
 
-    public void showData(String x, int pos) {
+    public void showData(int x, int pos) {
         if (pos != -1) {
             System.out.println("NIM \t  : " + x);
             System.out.println("Name \t : " + listStd[pos].name);

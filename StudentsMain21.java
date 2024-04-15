@@ -12,7 +12,7 @@ public class StudentsMain21 {
         MergeSorting21 sorting = new MergeSorting21();
 
         System.out.print("Enter the number of students: ");
-        int amountStudent = 3;
+        int amountStudent = 5;
         s.nextLine();
         
         SearchStudent21 data = new SearchStudent21(amountStudent);
