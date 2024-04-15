@@ -7,11 +7,12 @@ public class StudentsMain21 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        Scanner s1 = new Scanner(System.in);
         
         MergeSorting21 sorting = new MergeSorting21();
 
         System.out.print("Enter the number of students: ");
-        int amountStudent = 5;
+        int amountStudent = 3;
         s.nextLine();
         
         SearchStudent21 data = new SearchStudent21(amountStudent);
@@ -38,21 +39,22 @@ public class StudentsMain21 {
         sorting.MergeSorting(listNIM);
 
         System.out.println("--------------------------------------");
-        System.out.println("Entire Student Data (Sorted)");
+        System.out.println("Entire Student Data");
         data.display();
 
         System.out.println("-------------------");
         System.out.println("===================");
-        System.out.print("Search student by NIM: ");
-        int search = s.nextInt();
-        System.out.print("Using binary Search");
-        int position1 = data.FindBinarySearch(search, 0, amountStudent -1);
+        System.out.print("Search student by Name: ");
+        String searchName = s1.nextLine();
+        int position1 = data.findSeqSearchByName(searchName);
         
         if (position1 != -1) {
-            System.out.println("Data : " + search + " is found in index -" + position1);
+            System.out.println("Using Sequential Search");
+            System.out.println("Data : " + searchName + " is found in index -" + position1);
             data.listStd[position1].display();
-        } else {
-            System.out.println("Data : " + search + " is not found");     
+        }else {
+            System.out.println("using Sequential Search");
+            System.out.println("Data : " + searchName + " is not found");     
         }
     }
 }
